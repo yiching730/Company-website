@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design1</title>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+  <script src="js/videopopup.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/videopopup.css" media="screen" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+    }
+
+    #f1 {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+    }
+
+    .f1-1 {
+      border: 1px solid black;
+
+    }
+
+    .f1-2 {
+      top: 0px;
+      position: fixed;
+      z-index: 100;
+      background-color: white;
+
+    }
+
+    .f1-3 {
+      top: 0px;
+      position: fixed;
+      right: 40%;
+      z-index: 100;
+      background-color: white;
+
+    }
+
+    .f1-4 {
+      top: 0px;
+      position: fixed;
+      right: 2%;
+      z-index: 100;
+      background-color: white;
+    }
+
+    .f1-5 {
+      position: fixed;
+      z-index: 100;
+      background-color: white;
+      width: 100%;
+      height: 35px;
+      border-bottom: lightgrey 1px solid;
+    }
+
+
+    .f2 {
+      font-family: Helveticaneue;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 19px;
+      font-style: normal;
+      text-decoration: none;
+      color: #414141;
+    }
+
+    .f2:hover {
+      color: lightgray;
+    }
+
+    .f2-1 {
+      border: 0.5px solid lightgray;
+    }
+
+    .f3 {
+      font-family: Helveticaneue;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 19px;
+      font-style: normal;
+      text-decoration: none;
+      color: white;
+      border-collapse: separate;
+      margin-left: 10px;
+
+    }
+
+    .f3:hover {
+
+      color: white;
+    }
+
+    .btn btn-warning:hover {
+      background-color: burlywood;
+    }
+
+    .f4 {
+      font-family: Helveticaneue;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 26px;
+      font-style: normal;
+      text-decoration: none;
+      color: #414141;
+      border-collapse: separate;
+      margin-left: 20px;
+
+    }
+
+    .f4:hover {
+      color: #0075c9;
+    }
+
+
+
+    .titleCenter {
+      left: 100px;
+    }
+
+    .right1 {
+      top: 10px;
+      right: 20%;
+      position: fixed;
+    }
+
+    #f6 {
+      right: 0;
+      width: 130px;
+      height: 30px;
+      font-size: 5%;
+      color: #414141;
+      right: 0;
+    }
+
+    #f6:hover {
+      color: blue;
+    }
+
+    .f7 {
+      color: #0075c9;
+      font-family: Helveticaneue;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    #f8 {
+      font-family: Helveticaneue;
+      font-weight: 700;
+      line-height: 46px;
+      font-size: 42px;
+      color: #333e48;
+      width: 100%;
+      margin-top: 10px;
+      letter-spacing: 0;
+    }
+
+    .f8-1 {
+      color: #333e48;
+      font-family: Helveticaneue;
+      font-size: 54px;
+      font-weight: 700;
+      line-height: 60px;
+      margin-bottom: 16px;
+    }
+
+    #f9 {
+      padding-top: 100px;
+      width: 800px;
+      height: 620px;
+      top: 10px;
+    }
+
+    .f10 {
+      color: #666e75;
+      font-family: Helveticaneue;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 30px;
+
+    }
+
+    .f11 {
+      color: rgba(102, 110, 117, .7);
+      font-size: 12px;
+      list-style: 20px;
+      font-weight: 300;
+      font-family: Helveticaneue;
+    }
+
+    .f12 {
+      font-family: Helveticaneue;
+      background-color: #f3f5f7;
+      color: #666e75;
+      width: 100%;
+      height: 60px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 60px;
+    }
+
+    .f13 {
+      font-family: Helveticaneue;
+      font-size: 12px;
+      width: 135px;
+      height: 35px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .f14 {
+      background-color: #f3f5f7;
+
+    }
+
+    .f15 {
+      background-color: white;
+      width: 100%;
+      height: 88px;
+      border: 1px solid black;
+      margin-top: 10px;
+
+    }
+
+    .f15:hover {
+
+      transform: translateX(30px);
+    }
+
+    .f15-1 {
+      color: #333e48;
+      font-family: Helveticaneue;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 28px;
+
+    }
+
+    .f15-2 {
+      border-collapse: separate;
+      border-spacing: 0px 10px;
+
+    }
+
+    .f15-3 {
+      width: 60px;
+
+    }
+
+    .f15-4:hover {
+      display: none;
+      ;
+    }
+
+
+    #f16 {
+      padding: 15px 15px;
+      width: 100%;
+      height: 60px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 60px;
+    }
+
+    #f17 {
+      position: relative;
+      height: 450px;
+      top: 300px;
+
+    }
+
+    #f17-1 {
+      width: 70%;
+      top: 50px;
+
+    }
+
+    .f18 {
+      margin-top: 16px;
+      margin-left: 0;
+      padding-right: 48px;
+      text-align: left;
+    }
+
+    .f18-1 {
+      color: blue;
+      font-size: 20px;
+    }
+
+    #f19 {
+      position: relative;
+      padding-top: 100px;
+      width: 800px;
+      height: 400px;
+
+    }
+
+    #f20 {
+      text-decoration: none;
+    }
+
+    #f21 {
+      position: relative;
+      top: 100px;
+      height: 80px;
+
+    }
+
+    #f22 {
+      padding: 35px 100px;
+      width: 65%;
+
+    }
+
+    #f23 {
+      background-color: lightgrey;
+      position: relative;
+      top: 400px;
+      height: 500px;
+    }
+
+    #f24 {
+      color: white;
+      margin: 0 auto;
+      width: 240px;
+      margin-top: 50px;
+    }
+
+    #f25 {
+      height: 800px;
+      margin: 80px;
+      background-color: lightskyblue;
+    }
+
+    .f26 {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0px;
+    }
+
+    .f27 {
+      color: rgb(231, 211, 220);
+      text-decoration: none;
+      font-family: Helveticaneue;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 22px;
+      font-style: normal;
+      margin-left: 20px;
+    }
+
+    .f27:hover {
+      color: white;
+      text-decoration: none;
+
+    }
+
+    #f28 {
+      color: white;
+      font-family: Helveticaneue;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 26px;
+      font-style: normal;
+      margin-left: 20px;
+
+    }
+
+    .showArrow {
+      width: 10px;
+      height: 10px;
+
+      transition: opacity 200ms ease 0s;
+      opacity: 0;
+    }
+
+    .showArrow:hover {
+      width: 30px;
+      height: 30px;
+
+    }
+
+    .f29 {
+      color: rgba(255, 255, 255, 0.5);
+      font-family: Helveticaneue;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 20px;
+      font-style: normal;
+      text-decoration: none;
+      border-collapse: separate;
+      margin-left: 20px;
+    }
+
+    .f30 {
+      width: 24px;
+      height: 24px;
+      margin-left: 10px;
+      font-size: 24px;
+      color: white;
+    }
+
+    .f31 {
+      color: white;
+      font-size: 40px;
+    }
+
+    #f41 {
+      display: none;
+    }
+
+    #f40 {
+      background-color: white;
+      text-decoration: none;
+      font-family: Helveticaneue;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 26px;
+      font-style: normal;
+      color: #414141;
+      border-collapse: separate;
+      margin-left: 20px;
+      border: 0 none;
+    }
+
+    .f42 {
+      font-family: Helveticaneue;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 28px;
+      font-style: normal;
+      color: #00194d;
+    }
+
+    .f43 {
+      font-family: Helveticaneue;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 24px;
+      font-style: normal;
+      color: #666e75;
+    }
+
+    .f44 {
+      font-family: Helveticaneue;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 40px;
+      font-style: normal;
+      color: #666e75;
+    }
+
+    .f45 {
+      font-family: Helveticaneue;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 26px;
+      font-style: normal;
+      color: #00194d;
+    }
+
+    #f46 {
+      display: none;
+    }
+
+    #f47 {
+
+      background-color: white;
+      text-decoration: none;
+      font-family: Helveticaneue;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 26px;
+      font-style: normal;
+      color: #414141;
+      border-collapse: separate;
+      margin-left: 20px;
+      border: 0 none;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+
+      $("#f40").click(function () {
+        if ($("#f41").is(":hidden")) {
+          $(".pop-menu").hide();
+          $("#f41").show();
+        }
+        else {
+          $("#f41").hide()
+        };
+      });
+
+      $("#f47").click(function () {
+        if ($("#f46").is(":hidden")) {
+          $(".pop-menu").hide();
+          $("#f46").show();
+        }
+        else {
+          $("#f46").hide()
+        };
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+
+
+
+
+  <div class="f1-5">
+    <table class="f1-2">
+      <tr>
+        <td style="width: 100px; height: 30px;"><a href="http://localhost/website5/design1.html"><img src="images/1.svg"
+              alt=""></a>
+        </td>
+      </tr>
+    </table>
+
+    <table class="f1-3">
+      <tr>
+        <td><button id="f40" type="button">Products<i class="fas fa-caret-down"></i></button></td>
+        <td><button id="f47">Why Sanlam Indie<i class="fas fa-caret-down"></i></button></td>
+        <td><a href="" class="f4">Help</a></td>
+        <td><a href="" class="f4">Learn</td>
+        <td><a href="" class="f4">Blog</a></td>
+        <td><a href="" class="f4">Contact</a></td>
+        <td><a href="" class="f4">Claims</a></td>
+      </tr>
+    </table>
+
+    <table class="f1-4">
+      <tr>
+        <td><button class="f2-1"><a class="f2" href="">Log in</a></button></td>
+        <td><a class="btn btn-warning f3" href="">Get a quote</a></td>
+
+      </tr>
+    </table>
+
+
+  </div>
+
+  <div id="f41" class="pop-menu"
+    style="height: 360px;width: 100%; background-color: white; top: 35px; position: fixed; z-index: 101;">
+    <table>
+      <tr>
+
+        <td style="border: 1px #F1DEFF solid; padding: 20px 20px;">
+          <img
+            src="https://www.sanlamindie.co.za/website-files-global/5c7e4b054602df40a674372a/5c98aab9de94e8c41c064f59_Funeral%402x.svg"
+            alt="" width="30px">
+          <p class="f42">Funeral Cover</p>
+          <p class="f43">Funeral Cover that doubles after 3 years at no extra cost.</p>
+
+        </td>
+
+        <td style="border: 1px #F1DEFF solid; padding: 20px 20px;">
+          <img
+            src="https://www.sanlamindie.co.za/website-files-global/5c7e4b054602df40a674372a/5c98aafcde94e800d9064ffb_Finale%402x.svg"
+            alt="" width="30px">
+          <p class="f42">Life Cover + Quick Payout</p>
+          <p class="f43">If you die, we give you a proper send-off and help your family keep living their best life.</p>
+        </td>
+
+        <td style="border: 1px #F1DEFF solid;padding: 20px 20px;">
+          <img
+            src="https://www.sanlamindie.co.za/website-files-global/5c7e4b054602df40a674372a/5c98ab067e3bc96fab7fb441_Overcome%402x.svg"
+            alt="" width="30px">
+          <p class="f42">Critical Illness</p>
+          <p class="f43">If you get cancer or another serious condition, we give you the funds to fight back.</p>
+        </td>
+
+
+        <td style="border: 1px #F1DEFF solid;padding: 20px 20px;">
+          <img
+            src="https://www.sanlamindie.co.za/website-files-global/5c7e4b054602df40a674372a/5c98ab11d78421dafb95646e_Preserve%402x.svg"
+            alt="" width="30px">
+          <p class="f42">Income Protection</p>
+          <p class="f43">If you become disabled and can't work, we pay you an income until you're 70 or
+            you've recovered.</p>
+        </td>
+      </tr>
+
+      <tr>
+
+        <td style="border: 1px #F1DEFF solid;padding: 20px 20px;">
+          <img
+            src="https://www.sanlamindie.co.za/website-files-global/5c7e4b054602df40a674372a/5c98ab24d78421e2fc956487_Restart%402x.svg"
+            alt="" width="30px">
+          <p class="f42">Disability Cover</p>
+          <p class="f43">If you become disabled, we help you start over with a single lump-sum payout.</p>
+        </td>
+
+        <td style="border: 1px #F1DEFF solid;padding: 20px 20px;">
+          <img
+            src="https://www.sanlamindie.co.za/website-files-global/5c7e4b054602df40a674372a/5c98ab31544edd6b655ff68f_Assist%402x.svg"
+            alt="" width="30px">
+          <p class="f42">Death Income Protection</p>
+          <p class="f43">If you die, we pay your dependants a reliable income.</p>
+        </td>
+
+        <td style="padding: 20px 20px;">
+          <p class="f44">Find out what
+            Life Insurance you need.</p>
+          <a href="" class="btn btn-primary btn-lg active" role="button"
+            aria-pressed="true"
+            style="width: 90px; height: 35px; font-size: 13px; white-space:nowrap; font-weight:500; line-height:19px; font-family: Helveticaneue;">Get
+            starteded</a>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div id="f46" class="pop-menu"
+    style="height: 230px;width: 100%; background-color: white; top: 35px; position: fixed; z-index: 100;">
+    <table>
+      <tr>
+        <td style="border: 1px #F1DEFF solid;padding: 20px 20px;">
+          <img
+            src="https://www.sanlamindie.co.za/website-files-global/5c7e4b054602df9290743727/5cbf2e1b7cb9e60e233847cb_wealth-bonus.png"
+            alt="" width="30px" height="30px">
+          <p class="f42">Wealth Bonus</p>
+          <p class="f45">Your reward</p>
+          <p class="f43`">We match up to 100% of your premium in a growing Wealth Bonus at no extra cost.</p>
+        </td>
+
+        <td style="border: 1px #F1DEFF solid;padding: 20px 20px;">
+          <img
+            src="https://www.sanlamindie.co.za/website-files-global/5c7e4b054602df9290743727/5cbf2e1b1567c299caf63453_sanlam-indie-plan.png"
+            alt="" width="30px" height="30px">
+          <p class="f42">Sanlam Indie Plan</p>
+          <p class="f45">Find out what you need</p>
+          <p class="f43">Find out what Life Insurance you need, based on your needs.</p>
+        </td>
+
+        <td style="border: 1px #F1DEFF solid;padding: 20px 20px;">
+          <img
+            src="https://www.sanlamindie.co.za/website-files-global/5c7e4b054602df9290743727/5cbf2e1b760cd0f912ed50af_sanlam-indie.png"
+            alt="" width="30px" height="30px">
+          <p class="f42">About Sanlam Indie</p>
+          <p class="f45">The Team</p>
+          <p class="f43">Introducing the team that brought you innovative cover, the Wealth Bonus, financial freedom and
+            more.</p>
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+
+  <div class="container" id="f9">
+    <div class="row">
+      <div class="col" style="margin-top: 50px;">
+        <p class="f7">SANLAM INDIE</p>
+        <h2 class="f8-1">Life Insurance that creates wealth.</h2>
+        <p class="f10">Get world-class cover plus a growing Wealth Bonus at no extra cost.</p>
+        <a href="" class="btn btn-primary btn-lg active" role="button"
+          aria-pressed="true"
+          style="width: 120px; height: 40px; font-size: 14px; white-space:nowrap; font-weight:500; line-height:19px; font-family: Helveticaneue;"><i
+            class="fas fa-arrow-alt-right"></i>Get starteded</a>
+        <a href="" class="btn btn-light btn-lg active" role="button" aria-pressed="true"
+          style="width: 150px; height: 40px; font-size: 14px; white-space:nowrap; font-weight:500; line-height:19px; font-family: Helveticaneue;"><i
+            class="fas fa-mobile-alt"></i> Let us contact you</a>
+        <p class="f11"><i class="fas fa-info-circle"></i>Starting from R100 pm</p>
+
+      </div>
+      <div class="col">
+        <img src="images/bg1.jpeg" alt="" width="140%" height="120%">
+      </div>
+    </div>
+  </div>
+
+  <div class="f12"><a href=""><i class="fas fa-cog"></i></a>For all official information and updates regarding COVID-19,
+    visit the South
+    African Department of Health’s website <a style="text-decoration: none;"
+      href="">www.SAcoronavirus.co.za.</a></div>
+
+
+  <div class="container" style="padding-top: 100px; width: 1200px; height: 500px; top: 10px;">
+    <div class="row">
+
+      <div class="col" style="margin-left: 150px;">
+
+
+        <div class="jquery-script-ads" style="margin:50px auto;">
+          <script type="text/javascript">
+
+          </script>
+          <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script>
+        </div>
+        <a href="javascript:void(0)" id="video1"><img src="images/video1.png" width="500px" height="300px" alt=""></a>
+        <div id="vidBox">
+          <div id="videCont">
+            <video autoplay id="v1">
+              <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+            </video>
+          </div>
+        </div>
+        <script type="text/javascript">
+          $(function () {
+            $('#vidBox').VideoPopUp({
+              backgroundColor: "#17212a",
+              opener: "video1",
+              maxweight: "340",
+              idvideo: "v1",
+              pausevideo: true
+            });
+          });
+        </script>
+
+
+      </div>
+
+      <div class="col">
+        <p class="f7">wealth bonus</p>
+        <h2 id="f8">Insure your life and Sanlam Indie will invest in you.</h2>
+        <p class="f10">We match up to 100% of your life insurance premium into a Wealth Bonus that tracks the market
+          like
+          an investment. Every premium you pay helps create wealth for your future.</p>
+        <a href="" class="btn btn-primary btn-lg active f13" role="button"
+          aria-pressed="true" style="white-space:nowrap;">About Wealth Bonus</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="f14">
+
+    <div class="container" id="f22">
+      <div class="row">
+
+        <div class="col">
+          <div class="btn-group-vertical">
+            <table class="f15-2">
+              <tr class="f15">
+                <td class="f15-3"><img
+                    src="https://www.sanlamindie.co.za/website-files-global/5c7e4b054602df40a674372a/5c98aab9de94e8c41c064f59_Funeral%402x.svg"
+                    alt="" width="40px"></td>
+                <td class="f15-1">Funeral Cover</td>
+                <td class="f15-4"><img src="images/4.png" alt="" width="20px"></td>
+                <td></td>
+              </tr>
+
+              <tr class="f15">
+                <td class="f15-3"><img
+                    src="https://www.sanlamindie.co.za/website-files-global/5c7e4b054602df40a674372a/5c98aafcde94e800d9064ffb_Finale%402x.svg"
+                    alt="" width="40px"></td>
+                <td class="f15-1">Life Cover + Quick Payout</td>
+                <td><img src="images/4.png" alt="" width="20px"></td>
+              </tr>
+
+              <tr class="f15">
+                <td class="f15-3"><img
+                    src="https://www.sanlamindie.co.za/website-files-global/5c7e4b054602df40a674372a/5c98ab067e3bc96fab7fb441_Overcome%402x.svg"
+                    alt="" width="40px"></td>
+                <td class="f15-1">Critical Illness</td>
+                <td><img src="images/4.png" alt="" width="20px"></td>
+              </tr>
+
+              <tr class="f15">
+                <td class="f15-3"><img
+                    src="https://www.sanlamindie.co.za/website-files-global/5c7e4b054602df40a674372a/5c98ab11d78421dafb95646e_Preserve%402x.svg"
+                    alt="" width="40px"></td>
+                <td class="f15-1">Income Protection</td>
+                <td><img src="images/4.png" alt="" width="20px"></td>
+              </tr>
+
+              <tr class="f15">
+                <td class="f15-3"><img
+                    src="https://www.sanlamindie.co.za/website-files-global/5c7e4b054602df40a674372a/5c98ab24d78421e2fc956487_Restart%402x.svg"
+                    alt="" width="40px"></td>
+                <td class="f15-1">Disability Cover</td>
+                <td><img src="images/4.png" alt="" width="20px"></td>
+              </tr>
+
+              <tr class="f15">
+                <td class="f15-3"><img
+                    src="https://www.sanlamindie.co.za/website-files-global/5c7e4b054602df40a674372a/5c98ab31544edd6b655ff68f_Assist%402x.svg"
+                    alt="" width="40px"></td>
+                <td class="f15-1">Death Income Protection</td>
+                <td><img src="images/4.png" alt="" width="20px"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col" style="padding-top: 140px;">
+          <p class="f7">products</p>
+          <h2 id="f8">Simpler, smarter, more rewarding cover.</h2>
+          <p class="f10">We think life insurance should be more about living. So we’ve designed our products to protect
+            and
+            create wealth while you're alive.</p>
+          <a href="" class="btn btn-primary btn-lg active f13" role="button"
+            aria-pressed="true" style="white-space:nowrap;">View our products</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div id="f21">
+
+    <div id="f16" align="center">
+      <p class="f7">WHY SANLAM INDIE?</p>
+      <h2 id="f8">Built from the ground up for the internet generation.</h2>
+      <p class="f10">Sanlam Indie is a digital-first insurer, using technology to make life insurance simpler, smarter
+        and
+        more rewarding.</p>
+    </div>
+
+  </div>
+
+
+
+  <div id="f17" class="container" align="center">
+    <div class="row" id="f17-1">
+      <div class="col f18">
+        <p class="f18-1"><i class="fas fa-mobile-alt"></i></p>
+        <h5 style="font-weight: bold;">Do everything online in no time.</h5>
+        <p>Get quoted and covered in under 10 minutes online. No paperwork or waiting.</p>
+      </div>
+
+      <div class="col f18">
+        <p class="f18-1"><i class="fas fa-ban"></i></p>
+        <h5 style="font-weight: bold;">Better technology gives you better value.</h5>
+        <p>We've eliminated old analogue processes with state-of-the-art tech that works better and costs you less.</p>
+      </div>
+
+      <div class="col f18">
+        <p class="f18-1"><i class="far fa-snowflake"></i></p>
+        <h5 style="font-weight: bold;">Don't just get insured, create wealth.</h5>
+        <p>Every Sanlam Indie policy has a built-in Wealth Bonus, and we contribute to it every time you pay your
+          premium.</p>
+      </div>
+
+      <div class="w-100"></div>
+      <div class="col f18">
+        <p class="f18-1"><i class="fas fa-clock"></i></p>
+        <h5 style="font-weight: bold;">You're covered instantly with Sanlam Indie.</h5>
+        <p>Buy your insurance online and get instant cover, before you've even paid for it.</p>
+      </div>
+
+      <div class="col f18">
+        <p class="f18-1"><i class="fas fa-registered"></i></p>
+        <h5 style="font-weight: bold;">Better insurance, at the best possible price.</h5>
+        <p>We use state-of-the-art technology to give you a more accurate premium, with lower premiums if you're lower
+          risk.</p>
+      </div>
+
+      <div class="col f18">
+        <p class="f18-1"><i class="fas fa-calendar-alt"></i></p>
+        <h5 style="font-weight: bold;">Skip premiums. For when life happens.</h5>
+        <p>Sanlam Indie lets you proactively skip premiums without losing cover or reducing your Wealth Bonus.</p>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+  <div style="background: lightgrey; position: relative; top: 400px; height: 500px;">
+    <div class="container" id="f19">
+      <div class="row">
+        <div class="col">
+          <p class="f7">SUPPORT</p>
+          <h2 id="f8">Friendly and helpful support when you need it.</h2>
+          <p class="f10">Insurance is a tricky subject, but with Sanlam Indie, help is always at hand. Check out our <a
+              id="f20" href="">Help Centre</a>, get qualified assistance through live
+            chat, or <a id="f20" href="">email us</a> .</p>
+
+
+        </div>
+        <div class="col">
+          <img src="images/phone.png" alt="" width="110%" height="90%">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div
+    style="background: linear-gradient( 135deg, #52E5E7 10%, #130CB7 100%); position: relative; top: 400px; height: 400px;">
+    <div class="container" id="f9">
+      <div class="row">
+        <div class="col"
+          style="color: white; font-weight: bold; font-family: Helveticaneue;font-weight: 700;font-size: 38px; line-height: 46px;">
+          <p>Get life insurance.</p>
+          <p>Get a Wealth Bonus.</p>
+          <p>Get living.</p>
+        </div>
+
+        <div class="col">
+          <p style="color: white; font-family: Helveticaneue;font-weight: 300;font-size: 20px; line-height: 30px;">Get
+            world-class cover that rewards you with wealth while you're alive.</p>
+          <a href="" class="btn btn-light btn-lg active" role="button"
+            aria-pressed="true"
+            style="width: 120px; height: 40px; white-space:nowrap;font-size: 14px; font-family: Helveticaneue;color: #0075c9;"><i
+              class="fas fa-arrow-alt-right"></i>Get starteded</a>or
+          <a href="" class="btn btn-outline-info btn-lg" role="button"
+            aria-pressed="true" style="height: 40px; font-size: 14px; font-family: Helveticaneue;color: white;">
+            <i class="fas fa-mobile-alt"></i>&nbsp;&nbsp; Let us contact you
+          </a>
+          <p class="f11">Instant, online, in minutes</p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div style="position: relative; top: 400px; height: 500px; width: 100%;">
+    <div class="row f26">
+
+      <div class="col-sm-4" style="background-color: #00194d; height: 100%;">
+        <div id="f24" class="col-4">
+          <h4> We're on a mission.</h4>
+          <p> At Sanlam Indie, we're using cutting-edge technology to transform the industry and
+            deliver financial
+            services that actually work for you.</p>
+
+          <p> No jargon. No messy paperwork. Just world-class products that are simple to use, easy
+            to understand, and
+            incredibly rewarding - allowing more ways for you to create and protect wealth.</p>
+        </div>
+      </div>
+
+
+      <div class="col-sm-8" style="background-color: #0075c9; height: 100%;">
+
+        <table class="table" style="margin: 0 auto; margin-top: 50px;">
+          <tr>
+            <th scope="col">
+              <p id="f28">Our Products</p>
+              <p><a class="f27" href="">Funeral Cover</a></p>
+              <p><a class="f27" href="">Life Cover</a></p>
+              <p><a class="f27" href="">Critical Illness
+                  Cover</a></p>
+              <p><a class="f27" href="">Income Protection</a>
+              </p>
+              <p><a class="f27" href="">Disability Cover</a></p>
+              <p><a class="f27" href="">Death Income
+                  Cover</a></p>
+              <p><a class="f27" href="">Sanlam Indie Plan</a></p>
+            </th>
+
+            <th scope="col">
+              <p id="f28">Wealth Bonus</p>
+              <p><a class="f27" href="">What's a Wealth Bonus?</a></p>
+            </th>
+
+
+            <th scope="col">
+              <p id="f28">Company</p>
+              <p><a class="f27" href="">About Sanlam Indie</a></p>
+              <p><a class="f27" href="">Dashboard Log in</a></p>
+              <p><a class="f27" href="">Contact</a></p>
+            </th>
+
+
+            <th scope="col">
+              <p id="f28">Resources</p>
+              <p><a class="f27" href="">Help</a></p>
+              <p><a class="f27" href="">Learn</a></p>
+              <p><a class="f27" href="">Blog</a></p>
+              <p><a class="f27" href="">Claims</a></p>
+              <p><a class="f27" href="">Complaints</a></p>
+            </th>
+          </tr>
+
+        </table>
+
+
+        <a style=" margin-left: 20px;" href="http://localhost/website5/design1.html"><img src="images/1.svg" alt=""
+            width="60px" height="13px" style="background-color: white;"></a>
+        
+        <a class="f30" href="https://www.youtube.com/c/sanlamindie" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a class="f30" href="https://www.instagram.com/sanlamindie/" target="_blank"><i
+            class="fab fa-instagram"></i></a>
+        <a class="f30" href="https://www.facebook.com/sanlamindie" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a class="f30" href="https://twitter.com/sanlamindie" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a class="f30" href="https://www.linkedin.com/company/sanlamindie/" target="_blank"><i
+            class="fab fa-linkedin"></i></a>
+
+
+        <p class="f29">Copyright © Sanlam Indie 2021. All Rights Reserved. Sanlam Indie's product offering is
+          underwritten by Sanlam Life Insurance Limited, a registered long-term insurer. Sanlam Indie is a division of
+          Sanlam Life Insurance Limited - Reg No. 1998/021121/06. Sanlam Life Insurance Limited is an authorised FSP
+          (No. 2759). Address: Tygerpark 5, 2nd Floor, Tyger Valley, Bellville Park, Cape Town, 7530, South Africa.
+          Privacy | Terms of Use
+        </p>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
